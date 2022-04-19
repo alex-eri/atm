@@ -1,0 +1,14 @@
+#!/bin/bash
+set -x
+
+cmd=$1
+
+[ $cmd -eq 7] && exit 0
+
+zenity --title="Банковский терминал оффлайн"  --text="Операция прошла успешно?\n $1 $2 " --no-wrap --question
+ans=$?
+
+[ $ans -eq 0 ] && ( cp demo.e e; cp demo.p p )
+[ $ans -eq 1 ] && ( cp bad.e e; cp bad.p p )
+
+exit 0
