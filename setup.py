@@ -8,7 +8,7 @@ setup(
     install_requires=[
           "aiohttp", "pyserial-asyncio", "toml"
     ],
-    packages=['atm.sber', 'atm.cashcode'],
+    packages=['atm.sber', 'atm.cashcode', 'atm.lcdm2'],
     package_data={'atm.sber':['sb_pilot/*', 'demo/*'] },
     #include_package_data=True,
     #data_files=data_files,
